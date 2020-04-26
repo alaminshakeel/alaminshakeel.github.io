@@ -40,7 +40,7 @@
   <div id="main" >
     <div class="content_area" id="primary">
       <div role="main" class="site_content" id="content">
-        <section class="section profile_section first odd" id="profile"> <a id="blog_page_link" href="blog-category-arhive.html"><span class="icon-pencil icon"></span><span class="label">Blog</span></a>
+        <section class="section profile_section first odd open" id="profile"> <a id="blog_page_link" href="blog-category-arhive.html"><span class="icon-pencil icon"></span><span class="label">Blog</span></a>
           <div class="section_header profile_section_header opened">
             <h2 class="section_title profile_section_title vis"><a href="#"><span class="icon icon-user"></span><span class="section_name">Profile</span></a><span class="section_icon"></span></h2>
             <div id="profile_header">
@@ -75,7 +75,7 @@
         <div id="mainpage_accordion_area"> 
           
           <!-- RESUME -->
-          <section class="section resume_section even" id="resume">
+          <section class="section resume_section even open" id="resume">
             <div id="resume_buttons"> <a target="_blank" id="resume_link" href="print.html"><span class="label">Print</span><span class="icon-print icon"></span></a> <a target="_blank" id="resume_link_download"><span class="label">Download</span><span class="icon-download icon"></span></a> </div>
             <div class="section_header resume_section_header">
               <h2 class="section_title resume_section_title"><a href="#"><span class="icon icon-align-left"></span><span class="section_name">Resume</span></a><span class="section_icon"></span></h2>
@@ -186,7 +186,7 @@
           <!-- /RESUME--> 
           
           <!-- PORTFOLIO -->
-          <section class="section portfolio_section odd" id="portfolio">
+          <section class="section portfolio_section odd open" id="portfolio">
             <div class="section_header portfolio_section_header">
               <h2 class="section_title portfolio_section_title"><a href="#"><span class="icon icon-briefcase"></span><span class="section_name">Portfolio</span></a><span class="section_icon"></span></h2>
             </div>
@@ -287,7 +287,7 @@
           <!-- /PORTFOLIO --> 
           
           <!-- CONTACTS -->
-          <section class="section contact_section even" id="contact">
+          <section class="section contact_section even open" id="contact">
             <div class="section_header contact_section_header">
               <h2 class="section_title contact_section_title"><a href="#"><span class="icon icon-envelope-alt"></span><span class="section_name">Contacts</span></a><span class="section_icon"></span></h2>
             </div>
@@ -364,7 +364,7 @@
 <script type="text/javascript" src="js/googlemap_init.js"></script> 
 <script type="text/javascript" src="js/jquery.easing.js"></script> 
 <script type="text/javascript" src="js/jquery.reject.js"></script> 
-<script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=false"></script> 
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWi2AlHLV5erUJZp8wgvD08GbVjxeIieU"></script> 
 <script type="text/javascript" src="js/utils.js"></script> 
 <script type="text/javascript" src="js/lib.js"></script>
 </body>
@@ -374,6 +374,8 @@
 
 <script>
   jQuery(function(){
-    jQuery("#mainpage_accordion_area section > .section_header > .section_title").trigger("click");
+    
+    // initAnimation(); 
+    
   });
 </script>

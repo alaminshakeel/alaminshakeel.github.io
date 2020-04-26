@@ -254,6 +254,38 @@ jQuery(document).ready(function(){
 			initialIndex: -1
 		});
 
+
+		// SPECIAL START
+
+		var QRphone = $QRphone;
+		var QRemail = $QRemail;
+		var QRsite = $QRsite;
+		var QRadress = $QRadress;
+
+		// progressbar and svg init
+		var wd = jQuery(this).find('.progress').attr('data-process');
+		if(jQuery(this).find('.progress').width() === 0) {
+			jQuery(this).find('.progress').animate({'width': wd}, 700);
+		}
+		jQuery('.svg').addClass('vis');
+
+		// Isotope refresh
+		if (jQuery('.portfolio_items.isotope').length > 0 && jQuery('.portfolio_items.isotope:hidden').length === 0) {
+			jQuery('.portfolio_items').isotope({ filter: getIsotopeFilter() });
+		}
+
+		// Google info
+		if( QRadress != null && QRadress != "" ) { jQuery('.add_info .address').slideDown().find('.td').html(QRadress) } 
+		if( QRphone != null && QRphone != "" ) { jQuery('.add_info .phone').slideDown().find('.td').html(QRphone) } 
+		if( QRemail != null && QRemail != "" ) { jQuery('.add_info .email').slideDown().find('.td').html(QRemail) } 
+		if( QRsite != null && QRsite != "" ) { jQuery('.add_info .website').slideDown().find('.td').html(QRsite) } 
+		// Google map refresh
+		if (!googlemap_refreshed) {
+			if (window.googlemap_refresh) {googlemap_refresh();}
+			googlemap_refreshed = true;
+		}
+		// SPECIAL END
+
 		jQuery('.cleared .widget_skills .skills_row').each(function(){
 			var wd = jQuery(this).find('.progress').attr('data-process');
 			if(jQuery(this).find('.progress').width() === 0) {
@@ -375,8 +407,24 @@ jQuery(document).ready(function(){
 				jQuery('#resume_buttons').css({'top':top});
 			}
 		});
+
+
+	// var QRphone = $QRphone;
+	// var QRemail = $QRemail;
+	// var QRsite = $QRsite;
+	// var QRadress = $QRadress;
+
+		// initialisation 
+function initAnimation(){
+
+	console.log('yo')
+
+
 		
+}
+
 		
+initAnimation(); 		
 
 
 });
@@ -600,7 +648,6 @@ jQuery(window).load(function(){
 	});
 	}
 });
-
 
 
 

@@ -263,11 +263,13 @@ jQuery(document).ready(function(){
 		var QRadress = $QRadress;
 
 		// progressbar and svg init
-		var wd = jQuery(this).find('.progress').attr('data-process');
-		if(jQuery(this).find('.progress').width() === 0) {
-			jQuery(this).find('.progress').animate({'width': wd}, 700);
-		}
-		jQuery('.svg').addClass('vis');
+		jQuery('.widget_skills .skills_row').each(function(){
+			var wd = jQuery(this).find('.progress').attr('data-process');
+			if(jQuery(this).find('.progress').width() === 0) {
+				jQuery(this).find('.progress').animate({'width': wd}, 700);
+			}
+			jQuery('.svg').addClass('vis');
+		});
 
 		// Isotope refresh
 		if (jQuery('.portfolio_items.isotope').length > 0 && jQuery('.portfolio_items.isotope:hidden').length === 0) {
@@ -288,7 +290,9 @@ jQuery(document).ready(function(){
 		}
 
 		setTimeout(function(){
+			
 			jQuery("#portfolio_iso_filters a.current").click();
+
 		}, 2000)
 
 		// SPECIAL END

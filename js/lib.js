@@ -272,6 +272,8 @@ jQuery(document).ready(function(){
 		// Isotope refresh
 		if (jQuery('.portfolio_items.isotope').length > 0 && jQuery('.portfolio_items.isotope:hidden').length === 0) {
 			jQuery('.portfolio_items').isotope({ filter: getIsotopeFilter() });
+			
+			
 		}
 
 		// Google info
@@ -284,6 +286,11 @@ jQuery(document).ready(function(){
 			if (window.googlemap_refresh) {googlemap_refresh();}
 			googlemap_refreshed = true;
 		}
+
+		setTimeout(function(){
+			jQuery("#portfolio_iso_filters a.current").click();
+		}, 2000)
+
 		// SPECIAL END
 
 		jQuery('.cleared .widget_skills .skills_row').each(function(){
